@@ -10,5 +10,5 @@ void function_hello_world()
 int main(void)
 {
 	function_hello_world();
-	return(1);
+	return(0);
 }
