@@ -7,7 +7,7 @@ void function_hello_world()
 	
 }
 
-int main(int)
+int main(void)
 {
 	function_hello_world();
 	return 0;
