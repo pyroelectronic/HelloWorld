@@ -1,0 +1,6 @@
+language: cpp
+compiler: gcc
+
+script:
+- g++ src/main.c -o travis_gcc_cpp98
+- ./travis_gcc_cpp98
