@@ -5,11 +5,12 @@ void function_hello_world()
 {
 	printf("HELLO WOLRD!!!");
 	
+<<<<<<< HEAD
+=======
 }
 
-int main(int)
+void main()
 {
 	function_hello_world();
-	return 0;
-
+>>>>>>> 18cc84a1219f2d6f7946ab9035249af1057c73bd
 }
