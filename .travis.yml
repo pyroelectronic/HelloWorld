@@ -1,2 +1,6 @@
-os: windows
-language: c
+language: cpp
+compiler: gcc
+
+script:
+- g++ main.c -o travis_gcc_cpp98
+- ./travis_gcc_cpp98
