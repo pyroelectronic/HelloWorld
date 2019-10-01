@@ -10,6 +10,10 @@ void function_hello_world()
 int main(void)
 {
 	function_hello_world();
+	
+	char local_array[10]={0};
+	local_arry[10]=100;
+	
 	return 0;
 
 }
