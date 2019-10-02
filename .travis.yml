@@ -22,7 +22,6 @@ script:
   - ./travis_gcc_cpp17_cppcheck
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 .
-  - ./get_code_cov
   - codecov
 
   
