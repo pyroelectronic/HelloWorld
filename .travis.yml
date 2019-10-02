@@ -1,22 +1,13 @@
+
 sudo: require
-language: cpp
+language: c
 compiler: gcc
 dist: trusty
 
-install: 
+script:
+  - gcc -coverage -O0 main.c -o hello
+  - ./hello
+  - gcov hello.c
 
-  # cppcheck
-  - sudo apt-get install -qq cppcheck
- 
-
-
-script: 
-  # Build and run this project
-  - g++ -coverage -O0 src/main.cpp -o travis_gcc_cpp17_cppcheck
-  - ./travis_gcc_cpp17_cppcheck
-  - gcov src/main.cpp
-
-
-  
-after_success: 
+after_success:
   - bash <(curl -s https://codecov.io/bash)
