@@ -3,34 +3,20 @@ language: cpp
 compiler: gcc
 dist: trusty
 
-before_install:
-  # C++17
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
-  - sudo pip install codecov
-
 install: 
-  # C++17
-  - sudo apt-get install -qq g++-6
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+
   # cppcheck
   - sudo apt-get install -qq cppcheck
  
- codecov:
- 41ba3f93-89e0-446a-bafa-7fe47623a349
+
 
 script: 
   # Build and run this project
-  - g++ src/main.cpp -std=c++17 -o travis_gcc_cpp17_cppcheck
+  - g++ -coverage -O0 src/main.cpp -o travis_gcc_cpp17_cppcheck
   - ./travis_gcc_cpp17_cppcheck
-<<<<<<< HEAD
-  # cppcheck
-  - cppcheck --quiet --error-exitcode=1 .
-  - codecov
-
-=======
   - gcov src/main.cpp
->>>>>>> 0
+
+
   
 after_success: 
   - bash <(curl -s https://codecov.io/bash)
