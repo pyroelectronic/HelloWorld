@@ -9,16 +9,16 @@ void function_hello_world()
 
 int main(void)
 {
-	
+	int x = 0;
 	if(0)
 	{
-		int x = 10;
+		x = 10;
 	}
 	
 	function_hello_world();
 	
 	char local_array[10]={0};
-	local_array[9]=100+x;
+	local_array[9]=100;
 	
 	return 0;
 
