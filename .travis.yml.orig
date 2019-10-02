@@ -1,0 +1,25 @@
+sudo: require
+language: cpp
+compiler: gcc
+dist: trusty
+
+install: 
+
+  # cppcheck
+  - sudo apt-get install -qq cppcheck
+ 
+ codecov:
+ 41ba3f93-89e0-446a-bafa-7fe47623a349
+
+script: 
+  # Build and run this project
+  - g++ -coverage -O0 src/main.cpp -o travis_gcc_cpp17_cppcheck
+  - ./travis_gcc_cpp17_cppcheck
+  - gcov src/main.cpp
+
+
+  
+after_success: 
+  - bash <(curl -s https://codecov.io/bash)
+  
+  
