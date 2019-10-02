@@ -15,6 +15,9 @@ install:
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
   # cppcheck
   - sudo apt-get install -qq cppcheck
+ 
+ codecov:
+ 41ba3f93-89e0-446a-bafa-7fe47623a349
 
 script: 
   # Build and run this project
